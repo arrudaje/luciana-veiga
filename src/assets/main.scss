@@ -1,0 +1,12 @@
+@import './base';
+
+#app {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+a {
+  color: var(--color-secondary);
+  transition: 0.4s;
+}

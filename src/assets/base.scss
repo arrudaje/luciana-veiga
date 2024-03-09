@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;700&display=swap');
+
+/* semantic color variables for this project */
+:root {
+  --color-background: rgb(232, 214, 194);
+  --color-text: rgb(29, 4, 1);
+  --color-secondary: rgb(121, 55, 39);
+  --color-accent: rgb(143, 141, 118);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: rgb(29, 4, 1);
+    --color-text: rgb(232, 214, 194);
+    --color-secondary: rgb(143, 141, 118);
+    --color-accent: rgb(121, 55, 39);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.2;
+  font-weight: 300;
+  font-family: 'Figtree', sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
