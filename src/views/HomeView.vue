@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import Product from "../components/Product.vue"
+import Product from "../components/Product.vue";
+import bolo from "../assets/products/bolo.jpg"
 </script>
 
 <template>
   <main class="home">
-    <Product image="bolo" name="Bolo" :price="400" :variants="['chocolate', 'baunilha']" />
+    <Product :image="bolo" name="Bolo" :price="400" :variants="['chocolate', 'baunilha']" />
   </main>
 </template>
 

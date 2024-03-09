@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 const props = defineProps<{
   image: string
@@ -13,16 +13,12 @@ const emit = defineEmits(['addedToCart'])
 
 const amount = ref(0)
 const variant = ref(null)
-const imageSrc = computed(() => {
-  const path = `/src/assets/products/${props.image}.jpg`
-  return new URL(path, import.meta.url).href
-})
 </script>
 
 <template>
   <div class="product">
     <div class="product__image">
-      <img :src="imageSrc" :alt="name" class="product__image__img" />
+      <img :src="image" :alt="name" class="product__image__img" />
     </div>
     <div class="product__main">
       <div class="product__main__name">{{ name }}</div>
