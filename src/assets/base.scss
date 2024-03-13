@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;700&display=swap');
+@import url('https://use.typekit.net/pew7lem.css');
 
 /* semantic color variables for this project */
 :root {
-  --color-background: rgb(232, 214, 194);
+  --color-background: rgb(213, 213, 204);
   --color-text: rgb(29, 4, 1);
   --color-secondary: rgb(121, 55, 39);
   --color-accent: rgb(143, 141, 118);
@@ -11,7 +12,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: rgb(29, 4, 1);
-    --color-text: rgb(232, 214, 194);
+    --color-text: rgb(213, 213, 204);
     --color-secondary: rgb(143, 141, 118);
     --color-accent: rgb(121, 55, 39);
   }

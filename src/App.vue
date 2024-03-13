@@ -33,6 +33,7 @@ import { RouterView } from 'vue-router'
       margin: 90px;
       z-index: 1;
       font-weight: 700;
+      font-family: "fleur-display", sans-serif;
     }
   }
 }

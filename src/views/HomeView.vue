@@ -5,7 +5,7 @@ import bolo from "../assets/products/bolo.jpg"
 
 <template>
   <main class="home">
-    <Product :image="bolo" name="Bolo" :price="400" :variants="['chocolate', 'baunilha']" />
+    <!-- <Product :image="bolo" name="Bolo" :price="400" :variants="['chocolate', 'baunilha']" /> -->
   </main>
 </template>
 
