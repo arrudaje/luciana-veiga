@@ -1,19 +1,20 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import logo from './assets/logo.svg'
+import HeroImage from './components/HeroImage.vue'
 </script>
 
 <template>
   <header class="app__header">
-    <div class="app__header__logo">
+    <a href="/" class="app__header__logo">
       Luciana Veiga
       <span class="app__header__logo__subtitle">Bolos & Doces Artísticos</span>
       <img :src="logo" alt="Logotipo" class="app__header__logo__image" />
-    </div>
+    </a>
     <div class="app__header__hero">
       <div class="app__header__hero__copy">make your week sweet!</div>
       <div class="app__header__hero__image">
-        <div class="app__header__hero__image__main"></div>
+        <HeroImage class="app__header__hero__image__main" />
       </div>
     </div>
   </header>
@@ -28,7 +29,7 @@ import logo from './assets/logo.svg'
     position: relative;
     color: var(--color-background);
     min-height: 500px;
-    padding-left: 90px;
+    padding-left: calc(60px + 2rem);
     // background-image: url(./assets/header.jpg);
     // background-size: 50%;
     // background-repeat: no-repeat;
@@ -49,6 +50,7 @@ import logo from './assets/logo.svg'
       font-family: 'fleur-display', sans-serif;
       color: var(--color-secondary);
       transform: rotate(270deg) translate(-205px, -205px);
+      text-decoration: none;
 
       &__subtitle {
         font-family: 'Figtree', sans-serif;
@@ -80,12 +82,33 @@ import logo from './assets/logo.svg'
 
         &__main {
           aspect-ratio: 1/1;
-          background-color: black;
-          background-image: url(./assets/header.jpg);
-          background-repeat: no-repeat;
-          background-size: 600px;
-          background-position: 60% 10%;
-          mask-image: url(./assets/clippath.svg#clippath);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__header {
+      min-height: 100vh;
+      padding-left: calc(60px + 1rem);
+
+      &__logo {
+        padding: 0.5rem;
+        font-size: 50px;
+        transform: rotate(270deg) translate(-187px, -187px);
+        gap: 16px;
+        width: 450px;
+      }
+
+      &__hero {
+        padding: 16px;
+        flex-direction: column;
+
+        &__image {
+          width: 100vw;
+          position: absolute;
+          bottom: 0;
+          left: 0;
         }
       }
     }
